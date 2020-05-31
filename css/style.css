@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Satisfy&display=swap');
+body{
+    background-color: #f3f3f3;
+}
+h1{
+    margin: 5% 42%;
+    color: blue;
+    font-size: 50px;
+    text-shadow: 2px 2px grey;
+}
+#myDiv{
+    width: 100%;
+    margin: 5% 0% 0% 0%;
+}
+#myDiv img{
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 0% 5% ;
+    border: 3px solid gold;
+    border-radius: 10px;
+    box-shadow: 5px 5px grey;
+}
+#myDiv img:first-child{
+    margin-left: 10%;
+}
+#result{
+    margin: 5% 0% 0% 10%;
+}
+ul{
+    border: 3px solid pink;
+    width: 87%;
+    border-radius: 3px;
+    box-shadow: 1px 1px grey;
+    
+}
+li{
+    padding: 1% 0 0 0%;
+    width: 70%;
+    list-style-type: none;
+    font-size: 34px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    line-break: 1.5;
+    margin-left: 12%;
+    height: fit-content;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+}
+li:nth-child(2n){
+    background-color: red;
+}
+li:last-child{
+    margin-bottom: 1%;
+}
+h2{
+    font-size: 50px;
+    font-family: 'Satisfy', cursive;
+    margin-left: 39%;
+}
