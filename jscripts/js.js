@@ -73,7 +73,7 @@ divForImages.addEventListener('click', handleClick);
 function handleClick(event) {
     // console.log(event.target.id);
     // console.log(event.target);
-    if (totalRounds <5) {
+    if (totalRounds <25) {
         localStore(); 
         if (event.target.id !== 'myDiv') {
 
@@ -92,7 +92,7 @@ function handleClick(event) {
 
             renderImages();
         }
-    } else if (totalRounds == 5) {
+    } else if (totalRounds == 25) {
         for (var i = 0; i < names.length; i++) {
             clickss[i] = Bus.all[i].clicks;
             views[i] = Bus.all[i].views;
