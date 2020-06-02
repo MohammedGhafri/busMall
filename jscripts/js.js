@@ -74,6 +74,7 @@ function handleClick(event) {
     // console.log(event.target.id);
     // console.log(event.target);
     if (totalRounds <5) {
+        localStore(); 
         if (event.target.id !== 'myDiv') {
 
             totalRounds++;
@@ -237,3 +238,13 @@ function charts() {
     //         // charts();
     //     }
 }
+function localStore(){
+    var localSt=JSON.stringify(Bus.all);
+    localStorage.setItem('firstStore',localSt);
+}
+function calldata(){
+    var myData=localStorage.getItem('firstStore');
+    if(myData){
+    Bus.all=JSON.parse(myData);
+}}
+calldata();
