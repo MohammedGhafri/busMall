@@ -29,6 +29,7 @@ Bus.all = []
 for (var i = 0; i < names.length; i++) {
     new Bus(names[i], formats[i]);
 }
+console.log(Bus.all);
 renderImages();
 
 // Render images
@@ -150,37 +151,32 @@ function charts() {
     // //   myChart.rend(); 
     // myChart.data.datasets[0].data.push(Bus.all); 
     // myChart.data.datasets[0].data=5;
+    // "bag", "bag", "banana", "banana", "bathroom", "bathroom", "boots", "boots", "breakfast", "breakfast", "bubblegum", "bubblegum", "chair", "chair", "cthulhu", "cthulhu", "dog-duck", "dog-duck", "dragon", "dragon", "pen", "pen", "pet-sweep", "pet-sweep", "scissors", "scissors", "shark", "shark", "sweep", "sweep", "tauntaun", "tauntaun", "unicorn", "unicorn", "usb", "usb", "water-can", "water-can", "wine-glass", "wine-glass"
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["bag", "bag", "banana", "banana", "bathroom", "bathroom", "boots", "boots", "breakfast", "breakfast", "bubblegum", "bubblegum", "chair", "chair", "cthulhu", "cthulhu", "dog-duck", "dog-duck", "dragon", "dragon", "pen", "pen", "pet-sweep", "pet-sweep", "scissors", "scissors", "shark", "shark", "sweep", "sweep", "tauntaun", "tauntaun", "unicorn", "unicorn", "usb", "usb", "water-can", "water-can", "wine-glass", "wine-glass"],
+            labels: names,
             datasets: [{
-                label: '# of Clicks and Views',
+                label: '# of Clicks ',
 
                 data: clickss,
                 data: array,
                 backgroundColor: [
-                    ' rgba(45, 206, 62, 0.7)', 'rgba(45, 206, 62, 0.7)',
-                    ' rgba(126, 147, 75, 0.1)', 'rgba(126, 147, 75, 0.1)',
-                    ' rgba(5, 148, 25, 0.3)', 'rgba(5, 148, 25, 0.3)',
-                    ' rgba(180, 202, 215, 0.8)', 'rgba(180, 202, 215, 0.8)',
-                    'rgba(162, 224, 27, 0.8) ', 'rgba(162, 224, 27, 0.8)',
-                    'rgba(102, 2, 0, 0.8)', 'rgba(102, 2, 0, 0.8)',
-                   'rgba(229, 192, 224, 0.6)', 'rgba(229, 192, 224, 0.6)',
-                   'rgba(66, 214, 188, 0.1)', 'rgba(66, 214, 188, 0.1)',
-                   'rgba(126, 120, 174, 0.3)',' rgba(126, 120, 174, 0.3)',
-                   'rgba(229, 180, 235, 0.2)',' rgba(229, 180, 235, 0.2)',
-                   'rgba(154, 197, 176, 0.1)',' rgba(154, 197, 176, 0.1)',
-                   'rgba(66, 246, 196, 0.3)', 'rgba(66, 246, 196, 0.3)',
-                    'rgba(161, 195, 227, 0.2)',' rgba(161, 195, 227, 0.2)',
-                    'rgba(91, 35, 233, 0.5)', 'rgba(91, 35, 233, 0.5)',
-                    'rgba(12, 43, 54, 0.2)',' rgba(12, 43, 54, 0.2)',
-                    'rgba(114, 203, 130, 1)',' rgba(114, 203, 130, 1)',
-                    'rgba(64, 113, 61, 0.7)', 'rgba(64, 113, 61, 0.7)',
-                    'rgba(184, 109, 30, 0.1)', 'rgba(184, 109, 30, 0.1)',
-                    'rgba(66, 118, 142, 0.1)', 'rgba(66, 118, 142, 0.1)',
-                    'rgba(240, 54, 152, 0.8)', 'rgba(240, 54, 152, 0.8)',
+                    ' #22104e', '#22104e',
+                    '#38275f','#4e3f71',
+                    '#645783','#7a6f94',
+                    '#9087a6','#a69fb8',
+                    '#bcb7c9','#d2cfdb',
+                    '#38275f','#4e3f71',
+                    '#645783','#7a6f94',
+                    '#2b1463','#341978',
+                    '#3e1d8d','#190c39',
+                    ' #22104e', '#22104e',
+
+                   
+                   
+                 
                 ],
                 borderColor: [
                    ' rgba(188, 135, 211, 0.5)',' rgba(188, 135, 211, 0.5)',
@@ -191,21 +187,40 @@ function charts() {
                    'rgba(127, 157, 243, 0.3)', 'rgba(127, 157, 243, 0.3)',
                    'rgba(201, 68, 83, 0.4) ','rgba(201, 68, 83, 0.4)',
                    'rgba(9, 89, 67, 0.2) ','rgba(9, 89, 67, 0.2)',
-                   'rgba(79, 44, 85, 0.7)' ,'rgba(79, 44, 85, 0.7)',
-                   'rgba(75, 138, 223, 0.6)',' rgba(75, 138, 223, 0.6)',
-                   'rgba(198, 35, 66, 0.1) ','rgba(198, 35, 66, 0.1)',
-                   'rgba(91, 191, 225, 0.6) ','rgba(91, 191, 225, 0.6)',
-                   'rgba(9, 84, 247, 0.9) ','rgba(9, 84, 247, 0.9)',
-                   'rgba(112, 253, 253, 0.1)',' rgba(112, 253, 253, 0.1)',
-                   'rgba(55, 2, 61, 0.3) ','rgba(55, 2, 61, 0.3)',
-                   'rgba(191, 171, 161, 0.9) ','rgba(191, 171, 161, 0.9)',
-                   'rgba(225, 171, 163, 0.1)' ,'rgba(225, 171, 163, 0.1)',
-                   'rgba(102, 104, 31, 0.1)',' rgba(102, 104, 31, 0.1)',
-                   'rgba(143, 51, 165, 0.9) ','rgba(143, 51, 165, 0.9)',
-                   'rgba(59, 194, 123, 0.8)' ,'rgba(59, 194, 123, 0.8)',
+                  
                 ],
                 borderWidth: 1
-            }]
+            },
+            {
+                label: '# of views ',
+
+                data: clickss,
+                data: views,
+                backgroundColor: [
+                  
+                    ' rgba(45, 206, 62, 0.7)', 'rgba(45, 206, 62, 0.7)',
+                    ' rgba(126, 147, 75, 0.1)', 'rgba(126, 147, 75, 0.1)', 
+                     ' rgba(5, 148, 25, 0.3)', 'rgba(5, 148, 25, 0.3)',
+                    ' rgba(180, 202, 215, 0.8)', 'rgba(180, 202, 215, 0.8)',
+                    'rgba(162, 224, 27, 0.8) ', 'rgba(162, 224, 27, 0.8)', 
+                   
+                 
+                ],
+                borderColor: [
+                  
+                   'rgba(127, 157, 243, 0.3)', 'rgba(127, 157, 243, 0.3)',
+                   'rgba(201, 68, 83, 0.4) ','rgba(201, 68, 83, 0.4)',
+                   'rgba(9, 89, 67, 0.2) ','rgba(9, 89, 67, 0.2)', 
+                   ' rgba(188, 135, 211, 0.5)',' rgba(188, 135, 211, 0.5)',
+                   ' rgba(217, 85, 255, 0.8)' ,'rgba(217, 85, 255, 0.8)',
+                   ' rgba(155, 55, 126, 0.4) ','rgba(155, 55, 126, 0.4)',
+                   ' rgba(20, 232, 80, 0.1) ','rgba(20, 232, 80, 0.1)',
+                   'rgba(226, 13, 143, 0.3) ','rgba(226, 13, 143, 0.3)',
+                  
+                ],
+                borderWidth: 1
+            },
+        ]
         },
         options: {
             scales: {
